@@ -10,7 +10,7 @@ class CustomersController < ApplicationController
 	end
 
 	def new
-		
+		@customer = Customer.new
 	end
 
 	def edit
@@ -18,7 +18,12 @@ class CustomersController < ApplicationController
 	end
 
 	def create
-		
+		@customer = Customer.new(customer_params) 
+		if @customer.save
+			redirect_to root_path
+		else
+			render :new
+		end
 	end
 
 	def update

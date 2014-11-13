@@ -35,7 +35,8 @@ class RestaurantsController < ApplicationController
 	end
 
 	def destroy
-		
+		@restaurant.destroy
+		redirect_to restaurants_path, notice: 'Restaurant removed successfully'
 	end
 
 	private

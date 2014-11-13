@@ -1,5 +1,7 @@
 <h1><%= @restaurant.name %></h1>
 <h2><%= @restaurant.description %></h2>
 <p>Open from: <%= @restaurant.open_hour %> to: <%= @restaurant.close_hour %> </p>
-<button><%= link_to "Make Reservation", new_reservation_path%></button><br>
+<button><%= link_to "Make Reservation", new_restaurant_reservation_path(@restaurant)%></button>
+<button><%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant)%></button>
+<button><%= link_to "Remove Restaurant", restaurant_path(@restaurant), method: :delete %></button><br>
 <%= link_to "Home", root_path %> | <%= link_to "Back to all Restaurants", restaurants_path %>

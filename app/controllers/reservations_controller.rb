@@ -10,7 +10,8 @@ class ReservationsController < ApplicationController
 	end
 
 	def new
-		
+		@restaurant = Restaurant.find(params[:restaurant_id])
+		@reservation = @restaurant.reservations.new
 	end
 
 	def edit
@@ -18,7 +19,8 @@ class ReservationsController < ApplicationController
 	end
 
 	def create
-		
+		@restaurant = Restaurant.find(params[:restaurant_id])
+		@reservation = @restaurant.reservations.create(params[:reservation])
 	end
 
 	def update
