@@ -1,0 +1,8 @@
+<h1>All Restaurants</h1>
+<% @restaurants.each do |rest| %>
+	<h2><%= rest.name %></h2>
+	<h3><%= rest.description %></h3>
+	<p><%= rest.address %></p>
+	<p>Open From: <%= rest.open_hour %> to: <%= rest.close_hour %> </p>
+	<br>
+	<% end %> 

@@ -1,0 +1,3 @@
+class Patron < Customer
+	
+end
