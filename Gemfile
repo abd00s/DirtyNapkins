@@ -34,6 +34,10 @@ gem 'awesome_print'
 gem 'better_errors'
 gem "binding_of_caller"
 gem 'foundation-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 
