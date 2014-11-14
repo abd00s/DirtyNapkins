@@ -31,6 +31,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'pry-rails'
 gem 'awesome_print'
+gem 'better_errors'
+gem "binding_of_caller"
 
 # Use unicorn as the app server
 # gem 'unicorn'

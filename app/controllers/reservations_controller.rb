@@ -20,7 +20,12 @@ class ReservationsController < ApplicationController
 
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
-		@reservation = @restaurant.reservations.create(params[:reservation])
+		@reservation = @restaurant.reservations.new(reservation_params)
+		if @reservation.save
+			redirect_to restaurant_path(@restaurant), notice: 'Booking Successfull'
+		else
+			render 'new'
+		end
 	end
 
 	def update

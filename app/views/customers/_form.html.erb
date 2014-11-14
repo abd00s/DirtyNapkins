@@ -27,11 +27,12 @@
     <%= f.password_field :password_confirmation %>
   </div> 
   <br>
+  Sign up as:
   <select name="customer[type]">
-    <option value="Patron" selected>Sign up as User</option>
-    <option value="Owner">Sign up as Restaurant Owner</option>
+    <option value="Patron" selected>User</option>
+    <option value="Owner">Restaurant Owner</option>
   </select> 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit value="Sign up"%>
   </div>
 <% end %>
