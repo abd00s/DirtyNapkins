@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
 	before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 	
 	def welcome
-		@message = "Welcome to Dirty Napkins"
+		@message = "Welcome to Dirty Napkin"
 	end
 
 	def index
